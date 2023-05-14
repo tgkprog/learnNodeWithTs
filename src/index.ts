@@ -8,8 +8,13 @@ app.use(express.json());
 app.use("/reminders", remindersRouter);
 app.get("/heartbeat", (req, res) => {
   res.send("Hi, v2, at server time " + Date.now());
+  let g = Date.now();
+  let h = 4;
+  h++;
+  console.log(h + g.valueOf());
 });
 app.listen(8000, () => console.log("Serv s"));
+
 console.log(" after lis");
 
 console.log(" after lis 2");
